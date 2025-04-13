@@ -1,0 +1,36 @@
+[project]
+name = "app"
+version = "0.1.0"
+description = "Django logs reporter"
+authors = [
+    {name = "AntAresWeb",email = "davy.anre@yandex.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pytest (>=8.3.5,<9.0.0)"
+]
+
+[tool.poetry.group.tests.dependencies]
+pytest = "^8.3.5"
+coverage = "^7.8.0"
+
+[tool.pytest.ini_options]
+pythonpath = ""
+python_files = [
+    "*_test.py",
+    "test_*.py",
+    "*_tests.py",
+    "tests_*.py",
+]
+addopts = "--import-mode=importlib"
+testpaths = [
+    "tests",
+]
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.5"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
