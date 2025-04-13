@@ -34,5 +34,5 @@ class SerialEngine(EngineAbstract):
     def __process(self, line: str) -> None:
         self.__report.process_string(line)
 
-    def get_report(self):
+    def get_report(self) -> None:
         self.__report.show()
