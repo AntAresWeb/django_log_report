@@ -4,12 +4,13 @@ import pytest
 
 from app.core.configs import parse_arguments
 
+test_data = [
+    ("file1 file2 --report handlers", ["file1", "file2"], "handlers"),
+    ("file1", ["file1"], None),
+]
 
 @pytest.mark.parametrize(
-    ("param_str", "file_list", "report_type"),
-    [
-        ("file1 file2 --report handlers", ["file1", "file2"], "handlers"),
-    ],
+    ("param_str", "file_list", "report_type"), test_data,
 )
 def test_argument_parser(
     param_str: str,
