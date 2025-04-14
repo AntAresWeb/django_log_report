@@ -68,7 +68,7 @@ def test_handler_report() -> None:
     hr.collect_statistic("oqwp[op ERROR django.request: GET /api/test1/")
     assert hr.show() == [
         'HANDLER      DEBUG       INFO        WARNING     ERROR       CRITICAL    ',
-        '/api/test1/             0           0           0           1           0',
+        '/api/test1/  0           0           0           1           0           ',
         '',
         'Total request:               1'
         ]
