@@ -21,7 +21,7 @@ def parse_arguments(arg_list: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument(
         "--report",
         type=str,
-        choices=const.REPORT_TYPES,
+        choices=const.AVAILABLE_REPORT_TYPES,
         help="Вид отчета",
     )
     return parser.parse_args(arg_list)

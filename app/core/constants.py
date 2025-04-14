@@ -1,6 +1,6 @@
 from pathlib import Path
 
-BASE_DIR = Path(__file__).parent
+BASE_DIR = Path(__file__).parent.parent.parent
 DATETIME_FORMAT = "%Y-%m-%d_%H-%M-%S"
 
 SERVICE_NAME = "django-log-report"
@@ -10,6 +10,6 @@ SERVICE_LOG_SIZE_BYTE = 1_000_000
 SERVICE_LOG_COUNT = 5
 SEVICE_LOG_FORMAT = '"%(asctime)s - [%(levelname)s] - %(message)s"'
 
-REPORT_TYPES = [
+AVAILABLE_REPORT_TYPES = [
     "handlers",
 ]
