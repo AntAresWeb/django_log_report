@@ -59,7 +59,7 @@ class HandlersReport(AbstractReport):
             st = f"{endpoint:<{position[0]}}"
             data = self.__collector[endpoint].__dict__
             for idx, status in enumerate(header[1:]):
-                st += f"{data.get(status, ''):{position[idx + 1]}}"
+                st += f"{data.get(status, ''):<{position[idx + 1]}}"
                 total_request += data.get(status, 0)
             report_strings.append(st)
 
