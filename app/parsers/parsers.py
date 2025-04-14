@@ -27,8 +27,3 @@ class DjangoRequestParser(AbstactParser):
             selection = re.search(val, line)
             result[key] = selection[0] if selection else None
         return result
-
-
-def get_django_request_parser() -> DjangoRequestParser:
-    return DjangoRequestParser()
-
